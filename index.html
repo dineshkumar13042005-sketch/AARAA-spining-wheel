@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AARAA BOTIQUE – THUDIYALUR | Lucky Spin Wheel</title>
+  <meta name="description" content="Spin and win exclusive festive offers at AARAA BOTIQUE, Thudiyalur, Coimbatore.">
+  <meta name="keywords" content="Aaraa Botique, Thudiyalur, Coimbatore, Diwali offers, lucky spin wheel, bridal wear, silk sarees">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       1. LUXURY REGAL PURPLE & GOLD DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --bg-dark: #0A0109;
+      --bg-card: rgba(30, 4, 25, 0.94);
+
+      --gold-primary: #D4AF37;
+      --gold-light: #FDF0CD;
+      --gold-bright: #FEE180;
+      --gold-dark: #8F6E1D;
+      --gold-metallic: linear-gradient(135deg, #FFF0B8 0%, #D4AF37 40%, #8F6E1D 75%, #FEE593 100%);
+      --gold-btn-gradient: linear-gradient(135deg, #FFE898 0%, #E8BC52 50%, #B88924 100%);
+      --gold-border: 1px solid rgba(212, 175, 55, 0.45);
+
+      --ruby-btn-gradient: linear-gradient(180deg, #A80D58 0%, #720539 50%, #4D0225 100%);
+
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-script: 'Caveat', cursive;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      width: 100%;
+      box-sizing: border-box;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      background-color: #06010B;
+      background-image: 
+        radial-gradient(circle at 50% 30%, rgba(14, 2, 22, 0.38) 0%, rgba(5, 1, 9, 0.85) 100%),
+        url('assets/sky_fireworks_1.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #FFF5F8;
+      font-family: var(--font-body);
+      line-height: 1.35;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      padding-left: env(safe-area-inset-left, 0px);
+      padding-right: env(safe-area-inset-right, 0px);
+    }
+
+    /* Ambient Festive Sparkle Grid */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(212, 175, 55, 0.2) 1px, transparent 1px);
+      background-size: 38px 38px;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Fullscreen Background Fireworks Canvas */
+    #bgCrackersCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(0.5rem, 2.5vw, 1.25rem);
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ==========================================================================
+       2. TOP COMPACT BRAND HEADER BAR
+       ========================================================================== */
+    header.compact-header {
+      padding: clamp(0.25rem, 0.8vh, 0.45rem) 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(10, 1, 14, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: relative;
+      z-index: 50;
+      flex-shrink: 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(0.35rem, 1.5vw, 1rem);
+    }
+
+    .brand-top-badge {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.35rem, 1.2vw, 0.55rem);
+      min-width: 0;
+    }
+
+    .brand-lotus-mini {
+      width: clamp(20px, 3.5vw, 26px);
+      height: clamp(20px, 3.5vw, 26px);
+      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.6));
+      flex-shrink: 0;
+    }
+
+    .brand-lotus-mini svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .brand-mini-text {
+      font-family: var(--font-display);
+      font-size: clamp(0.68rem, 1.8vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: clamp(0.5px, 0.3vw, 2px);
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-quick-contact {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .btn-quick-call {
+      background: transparent;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .btn-quick-call:hover {
+      background: rgba(212, 175, 55, 0.2);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-quick-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #FFFFFF;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+      box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-quick-whatsapp:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.45);
+    }
+
+    /* ==========================================================================
+       3. CENTER SCREEN STAGE (Matches User's Reference Poster Artwork Exactly!)
+       ========================================================================== */
+    main.center-app-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem 1rem 0.45rem;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      min-height: 0;
+    }
+
+    /* Fullscreen Seamless Festive Floor Panorama (Lanterns, Diyas, Reflective Stage, Foliage Bokeh) */
+    .festive-floor-panorama {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: clamp(150px, 32vh, 320px);
+      background-image: url('assets/festive_floor_panorama.png');
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* Brand Header Top (Centered above wheel) */
+    .hero-brand-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: clamp(0.1rem, 0.6vh, 0.25rem);
+      flex-shrink: 0;
+    }
+
+    .hero-crest-icon {
+      width: clamp(28px, 4.5vw, 36px);
+      height: clamp(28px, 4.5vw, 36px);
+      margin-bottom: 2px;
+      filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.85));
+      animation: lotusPulse 2.5s infinite ease-in-out;
+    }
+
+    @keyframes lotusPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.7)); }
+      50% { transform: scale(1.06); filter: drop-shadow(0 0 18px rgba(254, 225, 128, 0.95)); }
+    }
+
+    .hero-crest-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-brand-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 3.4vw, 2.15rem);
+      font-weight: 900;
+      letter-spacing: clamp(3px, 0.8vw, 5px);
+      line-height: 1;
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.9));
+    }
+
+    .hero-brand-sub {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 1px;
+    }
+
+    .hero-brand-sub .sub-text {
+      font-family: var(--font-display);
+      font-size: clamp(0.68rem, 1.4vw, 0.85rem);
+      font-weight: 700;
+      letter-spacing: clamp(3px, 0.6vw, 5px);
+      color: var(--gold-bright);
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+    }
+
+    .hero-brand-sub .sub-line {
+      display: inline-block;
+      width: clamp(20px, 4vw, 36px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+    }
+
+    .hero-tagline-script {
+      font-family: var(--font-script);
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      margin-top: 1px;
+      text-shadow: 0 0 10px rgba(254, 225, 128, 0.75);
+    }
+
+    /* THE WHEEL CONTAINER (Proportionally Scaled to Fit Inside Viewport) */
+    .wheel-main-assembly {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      flex-shrink: 1;
+      min-height: 0;
+    }
+
+    .wheel-circular-stage {
+      position: relative;
+      width: clamp(260px, min(calc(100vw - 32px), 43vh, 43dvh, 78vw), 420px);
+      height: auto;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      flex-shrink: 0;
+      max-width: 100%;
+    }
+
+    /* Top Fixed Gold Pointer Arrow (Matches Reference Poster with Leaf Crest!) */
+    .wheel-pointer-needle {
+      position: absolute;
+      top: clamp(-24px, -3vw, -18px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(34px, 5.2vw, 46px);
+      height: clamp(42px, 6.5vw, 56px);
+      z-index: 30;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.9));
+      transition: transform 0.08s ease;
+    }
+
+    .wheel-pointer-needle.ticking {
+      transform: translateX(-50%) rotate(-9deg) scale(1.1);
+    }
+
+    .wheel-pointer-needle svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Gold Outer Bezel Rim with 20 Twinkling LED Bulbs */
+    .wheel-outer-bezel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      padding: clamp(8px, 2vw, 13px);
+      background: radial-gradient(circle, #FFECA9 0%, #D4AF37 40%, #7A5308 75%, #ECC55B 100%);
+      box-shadow: 
+        0 10px 32px rgba(0, 0, 0, 0.9),
+        0 0 28px rgba(212, 175, 55, 0.5),
+        inset 0 0 10px rgba(0, 0, 0, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .rim-bulbs-container {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 25;
+    }
+
+    .rim-bulb {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0 0 6px 2px #FFE082, 0 0 12px 3px #FFB300;
+      transform: translate(-50%, -50%);
+      animation: bulbTwinkle 1.8s infinite ease-in-out alternate;
+    }
+
+    @keyframes bulbTwinkle {
+      0% { opacity: 0.45; transform: translate(-50%, -50%) scale(0.85); box-shadow: 0 0 4px 1px #FFE082; }
+      100% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); box-shadow: 0 0 8px 3px #FFE082, 0 0 16px 4px #FFB300; }
+    }
+
+    /* Clean Circular Rotating Disc (High-Res 1000x1000 Master Extracted from Poster) */
+    .wheel-rotating-disc {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.85);
+      cursor: pointer;
+      user-select: none;
+      transform: rotate(0deg);
+      transition: transform 6s cubic-bezier(0.12, 0.99, 0.22, 1);
+    }
+
+    .wheel-rotating-disc img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    /* Golden Pedestal Stand */
+    .wheel-stand-base {
+      position: relative;
+      width: clamp(160px, 38vw, 250px);
+      height: clamp(20px, 4vw, 32px);
+      margin-top: -6px;
+      z-index: 5;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
+      flex-shrink: 0;
+      max-width: 85%;
+    }
+
+    .wheel-stand-base svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Spin Action Controls */
+    .spin-controls-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      margin-top: clamp(0.25rem, 1vh, 0.45rem);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 15;
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       4. PROMINENT "SPIN & WIN" RUBY-MAGENTA PILL BUTTON (Matches Poster Exactly!)
+       ========================================================================== */
+    .btn-spin-now {
+      position: relative;
+      background: var(--ruby-btn-gradient);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.02rem, 2.4vw, 1.25rem);
+      letter-spacing: clamp(1.5px, 0.3vw, 2.5px);
+      padding: clamp(0.6rem, 1.8vh, 0.8rem) clamp(2.2rem, 5.5vw, 3.2rem);
+      min-height: 48px;
+      border-radius: var(--radius-full);
+      border: 2px solid #FFE082;
+      box-shadow: 
+        0 0 28px rgba(233, 30, 99, 0.85),
+        0 0 12px rgba(255, 224, 130, 0.75),
+        0 10px 28px rgba(0, 0, 0, 0.9),
+        inset 0 2px 4px rgba(255, 255, 255, 0.85),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      text-transform: uppercase;
+      transition: var(--transition);
+      cursor: pointer;
+      overflow: hidden;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-spin-now::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: 0.6s ease;
+    }
+
+    .btn-spin-now:hover:not(:disabled)::before {
+      left: 100%;
+    }
+
+    .btn-spin-now:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 
+        0 0 40px rgba(233, 30, 99, 1),
+        0 0 18px rgba(255, 224, 130, 0.95),
+        0 14px 34px rgba(0, 0, 0, 0.95),
+        inset 0 2px 6px rgba(255, 255, 255, 0.95);
+      border-color: #FFF5C0;
+    }
+
+    .btn-spin-now:active:not(:disabled) {
+      transform: translateY(0) scale(0.99);
+    }
+
+    .btn-spin-now:disabled {
+      opacity: 0.82;
+      cursor: not-allowed;
+    }
+
+    .btn-spin-now .spin-btn-icon {
+      font-size: 1.15em;
+      filter: drop-shadow(0 0 6px rgba(255, 224, 130, 0.85));
+    }
+
+    /* Tagline Directly Below Button (Script font with diamond sparkles) */
+    .festive-center-tagline {
+      font-family: var(--font-script);
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #FFF2C6;
+      text-shadow: 
+        0 0 8px rgba(255, 242, 198, 0.85),
+        0 0 18px rgba(212, 175, 55, 0.65),
+        0 2px 4px rgba(0, 0, 0, 0.95);
+      margin-top: clamp(0.2rem, 0.7vh, 0.4rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .festive-center-tagline .sparkle-star {
+      color: #FFE082;
+      font-size: 0.9em;
+      filter: drop-shadow(0 0 6px #FFD700);
+    }
+
+    .spin-status-msg {
+      font-size: 0.76rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      min-height: 1.1rem;
+    }
+
+    .sound-toggle-chip {
+      background: rgba(30, 4, 25, 0.85);
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      color: var(--gold-light);
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.18rem 0.7rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 2px;
+    }
+
+    .sound-toggle-chip:hover {
+      background: var(--gold-primary);
+      color: #210314;
+    }
+
+    /* ==========================================================================
+       5. ORNATE ROYAL ADDRESS PLAQUE (Matches Poster Bottom Scroll Frame Card!)
+       ========================================================================== */
+    .royal-address-plaque {
+      position: relative;
+      width: 100%;
+      max-width: 580px;
+      margin: clamp(0.35rem, 1vh, 0.65rem) auto 0;
+      padding: clamp(0.65rem, 1.6vh, 0.95rem) clamp(0.85rem, 2.5vw, 1.6rem);
+      background: rgba(6, 11, 26, 0.93);
+      border: 1.5px solid #D4AF37;
+      border-radius: 18px;
+      box-shadow: 
+        0 10px 32px rgba(0, 0, 0, 0.92),
+        0 0 24px rgba(212, 175, 55, 0.38),
+        inset 0 0 12px rgba(212, 175, 55, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 20;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .plaque-corner {
+      position: absolute;
+      width: clamp(20px, 3.5vw, 28px);
+      height: clamp(20px, 3.5vw, 28px);
+      pointer-events: none;
+      filter: drop-shadow(0 0 4px rgba(254, 225, 128, 0.6));
+    }
+    .plaque-tl { top: -2px; left: -2px; }
+    .plaque-tr { top: -2px; right: -2px; }
+    .plaque-bl { bottom: -2px; left: -2px; }
+    .plaque-br { bottom: -2px; right: -2px; }
+    .plaque-corner svg { width: 100%; height: 100%; }
+
+    .plaque-visit-tag {
+      font-family: var(--font-display);
+      font-size: clamp(0.62rem, 1.3vw, 0.72rem);
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 2px;
+    }
+
+    .plaque-store-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: 3px;
+      line-height: 1.1;
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.9));
+      margin-bottom: 3px;
+    }
+
+    .plaque-store-address {
+      font-size: clamp(0.68rem, 1.4vw, 0.76rem);
+      line-height: 1.35;
+      color: #FFF2D6;
+      font-weight: 500;
+      margin-bottom: clamp(0.45rem, 1vh, 0.65rem);
+    }
+
+    .plaque-actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(0.35rem, 1.2vw, 0.65rem);
+      flex-wrap: wrap;
+    }
+
+    .btn-plaque-action {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-primary);
+      color: #FFFFFF;
+      padding: clamp(0.28rem, 0.8vh, 0.36rem) clamp(0.55rem, 1.5vw, 0.8rem);
+      border-radius: var(--radius-full);
+      font-size: clamp(0.68rem, 1.3vw, 0.76rem);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: var(--transition);
+    }
+
+    @media (max-width: 600px) {
+      .plaque-actions-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem;
+        width: 100%;
+      }
+      .btn-plaque-action {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.25rem;
+        justify-content: center;
+        white-space: nowrap;
+      }
+      .btn-plaque-action.btn-plaque-directions {
+        grid-column: span 2;
+      }
+      .festive-center-tagline {
+        font-size: clamp(0.92rem, 3.8vw, 1.15rem);
+        padding: 0 0.4rem;
+        text-align: center;
+        margin-top: 0.2rem;
+        margin-bottom: 0.1rem;
+      }
+      .royal-address-plaque {
+        max-width: calc(100vw - 24px);
+        margin: 0.25rem auto 0;
+        padding: 0.5rem 0.65rem;
+      }
+      .compact-header .header-inner {
+        padding: 0 0.35rem;
+        gap: 0.3rem;
+      }
+      .brand-mini-text {
+        font-size: 0.7rem;
+        letter-spacing: 0.3px;
+      }
+      .btn-quick-call {
+        padding: 0.25rem 0.45rem;
+        font-size: 0.7rem;
+      }
+      .btn-quick-whatsapp {
+        padding: 0.25rem 0.45rem;
+        font-size: 0.7rem;
+      }
+      .btn-quick-whatsapp span {
+        display: none;
+      }
+    }
+
+    .btn-plaque-action:hover {
+      background: rgba(212, 175, 55, 0.3);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-plaque-action.btn-plaque-whatsapp {
+      border-color: rgba(37, 211, 102, 0.65);
+      background: rgba(37, 211, 102, 0.18);
+      color: #99FFC4;
+    }
+    .btn-plaque-action.btn-plaque-whatsapp:hover {
+      background: rgba(37, 211, 102, 0.35);
+      color: #FFFFFF;
+    }
+
+    .btn-plaque-action.btn-plaque-directions {
+      background: var(--gold-btn-gradient);
+      color: #210212;
+      border-color: #FFF2C0;
+      font-weight: 800;
+    }
+    .btn-plaque-action.btn-plaque-directions:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.6);
+    }
+
+    /* ==========================================================================
+       6. WINNING RESULT CARD MODAL DIALOG
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 0, 6, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      padding: clamp(0.75rem, 3vw, 1.5rem);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .result-card-modal {
+      position: relative;
+      background: radial-gradient(circle at 50% 0%, #300320 0%, #15010E 75%, #0A0007 100%);
+      border: 2px solid var(--gold-bright);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.2rem, 3vh, 1.6rem) clamp(1rem, 3vw, 1.8rem);
+      width: 100%;
+      max-width: 540px;
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.95),
+        0 0 45px rgba(212, 175, 55, 0.65),
+        inset 0 0 20px rgba(212, 175, 55, 0.25);
+      text-align: center;
+      transform: scale(0.9) translateY(20px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.active .result-card-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 0.65rem;
+      right: 0.75rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      color: var(--gold-light);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .modal-close-btn:hover {
+      background: #7A0C3C;
+      color: #FFFFFF;
+      transform: rotate(90deg);
+    }
+
+    .modal-brand-badge {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      letter-spacing: 3px;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      margin-bottom: 0.15rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .congrats-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 0.1rem;
+      letter-spacing: 1.5px;
+      line-height: 1.1;
+    }
+
+    .congrats-sub {
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .gold-winner-voucher {
+      position: relative;
+      background: linear-gradient(135deg, #FFF7D8 0%, #ECD06B 30%, #C49226 70%, #FEE8A0 100%);
+      color: #2D0515;
+      padding: 0.85rem 1.15rem;
+      border-radius: var(--radius-md);
+      border: 2px solid #FFF6D5;
+      box-shadow: 
+        0 8px 22px rgba(0, 0, 0, 0.75),
+        0 0 25px rgba(212, 175, 55, 0.55),
+        inset 0 1px 3px rgba(255, 255, 255, 0.9);
+      margin: 0 auto 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+    }
+
+    .voucher-prize-info {
+      text-align: left;
+      flex: 1;
+    }
+
+    .voucher-prize-value {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3.2vw, 1.85rem);
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      line-height: 1;
+      color: #290412;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+    }
+
+    .voucher-prize-tag {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #630C2C;
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .voucher-stars {
+      color: #8A5D07;
+      font-size: 0.55rem;
+      letter-spacing: 2px;
+    }
+
+    .voucher-coupon-wrap {
+      background: #1B0212;
+      border: 1px dashed var(--gold-bright);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      flex-shrink: 0;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .voucher-coupon-lbl {
+      font-size: 0.55rem;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .voucher-coupon-row {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .coupon-code-val {
+      font-family: 'Courier New', monospace;
+      font-size: 1.08rem;
+      font-weight: 900;
+      color: var(--gold-bright);
+      letter-spacing: 1.5px;
+      line-height: 1;
+    }
+
+    .btn-copy-code {
+      background: rgba(212, 175, 55, 0.25);
+      border: 1px solid var(--gold-primary);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.25rem 0.55rem;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+    }
+
+    .btn-copy-code:hover {
+      background: var(--gold-primary);
+      color: #1F030E;
+    }
+
+    .modal-actions-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .btn-whatsapp-claim {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 0.62rem 0.85rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp-claim:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-visit-boutique {
+      background: var(--gold-btn-gradient);
+      color: #2A0414;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding: 0.62rem 0.85rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.5);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-visit-boutique:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.7);
+    }
+
+    .modal-disclaimer {
+      font-size: 0.65rem;
+      color: var(--gold-light);
+      opacity: 0.85;
+      margin-top: 0.45rem;
+    }
+
+    /* Confetti Canvas */
+    #confettiCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1001;
+    }
+
+    /* Toast Notification */
+    .toast-popup {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: rgba(36, 4, 28, 0.95);
+      border: 1px solid var(--gold-bright);
+      color: #FFF5F8;
+      padding: 0.65rem 1.15rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      z-index: 1100;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
+
+    .toast-popup.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       7. RESPONSIVE DESIGN SPECIFICATIONS
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .header-quick-contact .btn-quick-call span {
+        display: none;
+      }
+      .header-quick-contact .btn-quick-call {
+        padding: 0.32rem 0.55rem;
+        min-width: 36px;
+        min-height: 36px;
+        justify-content: center;
+      }
+      .btn-spin-now {
+        min-height: 48px;
+        padding: 0.65rem 2.2rem;
+        font-size: 1.05rem;
+      }
+      .toast-popup {
+        bottom: 4.5rem;
+        right: 1rem;
+        left: 1rem;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 0.45rem;
+      }
+      header.compact-header {
+        padding: 0.28rem 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      .brand-top-badge {
+        gap: 0.35rem;
+        min-width: 0;
+      }
+      .brand-mini-text {
+        font-size: 0.72rem;
+        letter-spacing: 0.4px;
+      }
+      .header-quick-contact {
+        gap: 0.35rem;
+      }
+      .btn-quick-call {
+        padding: 0.28rem 0.45rem;
+        font-size: 0.72rem;
+        min-height: 32px;
+      }
+      .btn-quick-whatsapp span {
+        display: none;
+      }
+      .btn-quick-whatsapp {
+        padding: 0.28rem 0.5rem;
+        min-width: 32px;
+        min-height: 32px;
+        justify-content: center;
+      }
+      .hero-brand-top {
+        margin-bottom: 0.15rem;
+      }
+      .hero-crest-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .hero-brand-title {
+        font-size: 1.65rem;
+        letter-spacing: 2.5px;
+      }
+      .hero-brand-sub .sub-text {
+        font-size: 0.72rem;
+        letter-spacing: 3.5px;
+      }
+      .hero-brand-sub .sub-line {
+        width: 20px;
+      }
+      .hero-tagline-script {
+        font-size: 1.05rem;
+      }
+      .wheel-circular-stage {
+        width: clamp(235px, min(82vw, 36vh, 36dvh), 310px);
+      }
+      .btn-spin-now {
+        min-height: 44px;
+        padding: 0.5rem 1.6rem;
+        font-size: 0.95rem;
+        letter-spacing: 1.2px;
+      }
+      .festive-center-tagline {
+        font-size: clamp(0.92rem, 3.8vw, 1.1rem);
+        margin-top: 0.2rem;
+        margin-bottom: 0.1rem;
+        padding: 0 0.35rem;
+        gap: 0.35rem;
+        white-space: nowrap;
+      }
+      .royal-address-plaque {
+        max-width: 95vw;
+        padding: 0.5rem 0.6rem;
+        border-radius: 14px;
+        margin-top: 0.2rem;
+      }
+      .plaque-store-title {
+        font-size: 1.08rem;
+        letter-spacing: 2px;
+      }
+      .plaque-store-address {
+        font-size: 0.64rem;
+        margin-bottom: 0.35rem;
+        line-height: 1.25;
+      }
+      .plaque-actions-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem;
+        width: 100%;
+      }
+      .btn-plaque-action {
+        font-size: 0.68rem;
+        padding: 0.35rem 0.4rem;
+        justify-content: center;
+        white-space: nowrap;
+      }
+      .btn-plaque-action.btn-plaque-directions {
+        grid-column: span 2;
+      }
+      .result-card-modal {
+        padding: 1rem 0.85rem 0.85rem;
+      }
+      .congrats-title {
+        font-size: 1.25rem;
+      }
+      .voucher-prize-value {
+        font-size: 1.35rem;
+      }
+      .modal-actions-row {
+        gap: 0.5rem;
+      }
+      .btn-whatsapp-claim, .btn-visit-boutique {
+        font-size: 0.75rem;
+        padding: 0.55rem 0.65rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        padding: 0 0.45rem;
+      }
+      .brand-mini-text {
+        font-size: 0.68rem;
+        letter-spacing: 0.3px;
+      }
+      .hero-brand-title {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+      }
+      .hero-tagline-script {
+        font-size: 0.95rem;
+      }
+      .wheel-circular-stage {
+        width: clamp(220px, 82vw, 265px);
+      }
+      .btn-spin-now {
+        min-height: 44px;
+        padding: 0.55rem 1.6rem;
+        font-size: 0.92rem;
+        letter-spacing: 1px;
+      }
+      .festive-center-tagline {
+        font-size: 0.98rem;
+      }
+      .plaque-actions-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-plaque-action {
+        justify-content: center;
+      }
+      .gold-winner-voucher {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.6rem;
+      }
+      .modal-actions-row {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+      }
+      .btn-whatsapp-claim, .btn-visit-boutique {
+        font-size: 0.74rem;
+        padding: 0.55rem 0.7rem;
+      }
+    }
+
+    @media (max-height: 620px) {
+      body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+      }
+      .hero-brand-top {
+        margin-bottom: 0.1rem;
+      }
+      .hero-crest-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .hero-brand-title {
+        font-size: 1.35rem;
+      }
+      .hero-tagline-script {
+        font-size: 0.95rem;
+      }
+      .wheel-circular-stage {
+        width: clamp(190px, min(38vh, 48vw), 270px);
+      }
+      .btn-spin-now {
+        min-height: 42px;
+        padding: 0.45rem 1.6rem;
+        font-size: 0.92rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-crest-icon {
+        animation: none !important;
+      }
+      .rim-bulb {
+        animation: none !important;
+        opacity: 0.9 !important;
+      }
+      .btn-spin-now::before {
+        display: none !important;
+      }
+      .wheel-rotating-disc {
+        transition-duration: 1.5s !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Continuous Fireworks & Crackers Canvas -->
+  <canvas id="bgCrackersCanvas"></canvas>
+
+  <!-- Confetti Celebration Canvas -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Fullscreen Seamless Festive Floor Panorama (Lanterns, Diyas, Reflective Stage, Foliage Bokeh) -->
+  <div class="festive-floor-panorama" aria-hidden="true"></div>
+
+  <!-- Toast Notification Message -->
+  <div id="toastMessage" class="toast-popup">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Coupon code copied to clipboard!</span>
+  </div>
+
+  <!-- 1. Top Compact Header Bar -->
+  <header class="compact-header">
+    <div class="container header-inner">
+      
+      <div class="brand-top-badge">
+        <div class="brand-lotus-mini">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 12 C44 26 38 42 50 62 C62 42 56 26 50 12 Z" stroke="url(#lotusGoldMini)" stroke-width="3.5" fill="none"/>
+            <path d="M50 62 C34 50 18 52 14 36 C28 32 40 46 50 62 Z" stroke="url(#lotusGoldMini)" stroke-width="3.5" fill="none"/>
+            <path d="M50 62 C66 50 82 52 86 36 C72 32 60 46 50 62 Z" stroke="url(#lotusGoldMini)" stroke-width="3.5" fill="none"/>
+            <path d="M50 62 C26 62 10 70 8 52 C24 50 38 58 50 62 Z" stroke="url(#lotusGoldMini)" stroke-width="3" fill="none"/>
+            <path d="M50 62 C74 62 90 70 92 52 C76 50 62 58 50 62 Z" stroke="url(#lotusGoldMini)" stroke-width="3" fill="none"/>
+            <defs>
+              <linearGradient id="lotusGoldMini" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFF2C0"/>
+                <stop offset="50%" stop-color="#D4AF37"/>
+                <stop offset="100%" stop-color="#8F6E1D"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="brand-mini-text">AARAA BOTIQUE &bull; THUDIYALUR</span>
+      </div>
+
+      <div class="header-quick-contact">
+        <a href="tel:+919025927548" class="btn-quick-call">
+          <i class="fa-solid fa-phone"></i>
+          <span>+91 90259 27548</span>
+        </a>
+        <a href="https://wa.me/919025927548?text=Hello%20Aaraa%20Boutique%2C%20I%20am%20interested%20in%20your%20festive%20offers." target="_blank" rel="noopener noreferrer" class="btn-quick-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 2. Centered Lucky Spinning Wheel (Matches Reference Image Exactly!) -->
+  <main class="center-app-stage">
+    
+    <!-- Top Brand Header (Crest + Title + Script Tagline) -->
+    <div class="hero-brand-top">
+      <div class="hero-crest-icon">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 12 C44 26 38 42 50 62 C62 42 56 26 50 12 Z" stroke="url(#lotusGoldHero)" stroke-width="3.5" fill="none"/>
+          <path d="M50 62 C34 50 18 52 14 36 C28 32 40 46 50 62 Z" stroke="url(#lotusGoldHero)" stroke-width="3.5" fill="none"/>
+          <path d="M50 62 C66 50 82 52 86 36 C72 32 60 46 50 62 Z" stroke="url(#lotusGoldHero)" stroke-width="3.5" fill="none"/>
+          <path d="M50 62 C26 62 10 70 8 52 C24 50 38 58 50 62 Z" stroke="url(#lotusGoldHero)" stroke-width="3" fill="none"/>
+          <path d="M50 62 C74 62 90 70 92 52 C76 50 62 58 50 62 Z" stroke="url(#lotusGoldHero)" stroke-width="3" fill="none"/>
+          <path d="M30 68 C42 74 58 74 70 68" stroke="url(#lotusGoldHero)" stroke-width="3" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="lotusGoldHero" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#FFF2C0"/>
+              <stop offset="50%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#8F6E1D"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1 class="hero-brand-title">AARAA</h1>
+      <div class="hero-brand-sub">
+        <span class="sub-line"></span>
+        <span class="sub-text">BOTIQUE</span>
+        <span class="sub-line"></span>
+      </div>
+      <div class="hero-tagline-script">Spin ✦ Shop ✦ Smile</div>
+    </div>
+
+    <!-- Center Wheel Assembly -->
+    <div class="wheel-main-assembly">
+      
+      <div class="wheel-circular-stage">
+        
+        <!-- Top Fixed Gold Needle Pointer (Matching Reference Poster with Lotus Crest) -->
+        <div class="wheel-pointer-needle" id="pointerNeedle">
+          <svg viewBox="0 0 60 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 74 L8 22 C5 14 10 6 18 6 L42 6 C50 6 55 14 52 22 L30 74 Z" fill="url(#ptrGoldGrad)" stroke="#FFE898" stroke-width="2.5"/>
+            <path d="M30 6 L30 70" stroke="#FFF7D6" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18 8 L30 70" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+            <g transform="translate(19, 14) scale(0.22)">
+              <path d="M50 12 C44 26 38 42 50 62 C62 42 56 26 50 12 Z" fill="#2C0514"/>
+              <path d="M50 62 C34 50 18 52 14 36 C28 32 40 46 50 62 Z" fill="#2C0514"/>
+              <path d="M50 62 C66 50 82 52 86 36 C72 32 60 46 50 62 Z" fill="#2C0514"/>
+            </g>
+            <defs>
+              <linearGradient id="ptrGoldGrad" x1="8" y1="6" x2="52" y2="74" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FFF3C4"/>
+                <stop offset="35%" stop-color="#E5BC51"/>
+                <stop offset="70%" stop-color="#936F1A"/>
+                <stop offset="100%" stop-color="#E8C360"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Gold Outer Bezel with 20 Twinkling Bulbs -->
+        <div class="wheel-outer-bezel">
+          <div class="rim-bulbs-container" id="rimBulbsContainer"></div>
+
+          <!-- Rotating Wheel Disc (Ultra-Crisp Master Disc Extracted from Reference Poster) -->
+          <div class="wheel-rotating-disc" id="wheelDisc">
+            <img src="assets/wheel_rotating_disc.png" alt="Aaraa Boutique 6 Segment Lucky Wheel Disc">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Golden Stand Pedestal (Matches Reference Poster Stepped Stand) -->
+      <div class="wheel-stand-base">
+        <svg viewBox="0 0 280 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0 L230 0 L248 30 L32 30 Z" fill="url(#pedTier1)" stroke="#FFECA9" stroke-width="1.8"/>
+          <line x1="50" y1="2" x2="230" y2="2" stroke="#FFFFFF" stroke-width="2" opacity="0.8"/>
+          <path d="M22 30 L258 30 L266 46 L14 46 Z" fill="url(#pedTier2)" stroke="#FFECA9" stroke-width="1.8"/>
+          <rect x="0" y="46" width="280" height="20" rx="4" fill="url(#pedTier3)" stroke="#FFECA9" stroke-width="1.8"/>
+          <defs>
+            <linearGradient id="pedTier1" x1="32" y1="0" x2="248" y2="30" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#6E4A06"/>
+              <stop offset="30%" stop-color="#D4AF37"/>
+              <stop offset="50%" stop-color="#FFF3C4"/>
+              <stop offset="70%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#6E4A06"/>
+            </linearGradient>
+            <linearGradient id="pedTier2" x1="14" y1="30" x2="266" y2="46" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#8F6A18"/>
+              <stop offset="25%" stop-color="#E2BE5E"/>
+              <stop offset="50%" stop-color="#FFF8D8"/>
+              <stop offset="75%" stop-color="#E2BE5E"/>
+              <stop offset="100%" stop-color="#8F6A18"/>
+            </linearGradient>
+            <linearGradient id="pedTier3" x1="0" y1="46" x2="280" y2="66" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#553904"/>
+              <stop offset="35%" stop-color="#C59C2C"/>
+              <stop offset="50%" stop-color="#FEEBA0"/>
+              <stop offset="65%" stop-color="#C59C2C"/>
+              <stop offset="100%" stop-color="#553904"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+    </div>
+
+    <!-- Action Controls: Prominent "🔄 SPIN & WIN" Ruby-Magenta Button -->
+    <div class="spin-controls-bar">
+      <button class="btn-spin-now" id="spinBtn" aria-label="Spin and win lucky offers now">
+        <i class="fa-solid fa-rotate-right spin-btn-icon"></i>
+        <span>SPIN &amp; WIN</span>
+      </button>
+
+      <!-- Tagline Directly Below Button (Script font matching Poster) -->
+      <div class="festive-center-tagline">
+        <span class="sparkle-star">✦</span>
+        <span>Spin Your Luck &amp; Grab Amazing Offers!</span>
+        <span class="sparkle-star">✦</span>
+      </div>
+
+      <div class="spin-status-msg" id="spinStatusNote">
+        ✨ Tap SPIN &amp; WIN to unlock your exclusive boutique savings!
+      </div>
+
+      <button class="sound-toggle-chip" id="soundToggleBtn" aria-label="Toggle sound effects">
+        <i class="fa-solid fa-volume-high" id="soundIcon"></i>
+        <span id="soundLabel">Sound ON</span>
+      </button>
+    </div>
+
+    <!-- 3. Ornate Royal Address Plaque (Matches Reference Poster Bottom Scroll Frame) -->
+    <div class="royal-address-plaque">
+      <!-- Ornate Gold Corner Flourishes -->
+      <div class="plaque-corner plaque-tl">
+        <svg viewBox="0 0 30 30" fill="none"><path d="M3 27 V10 C3 6 6 3 10 3 H27 M8 8 C6 13 6 17 8 22 M8 8 C13 6 17 6 22 8" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="10" r="2.5" fill="#FFE082"/></svg>
+      </div>
+      <div class="plaque-corner plaque-tr">
+        <svg viewBox="0 0 30 30" fill="none"><path d="M27 27 V10 C27 6 24 3 20 3 H3 M22 8 C24 13 24 17 22 22 M22 8 C17 6 13 6 8 8" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="10" r="2.5" fill="#FFE082"/></svg>
+      </div>
+      <div class="plaque-corner plaque-bl">
+        <svg viewBox="0 0 30 30" fill="none"><path d="M3 3 V20 C3 24 6 27 10 27 H27 M8 22 C6 17 6 13 8 8 M8 22 C13 24 17 24 22 22" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="20" r="2.5" fill="#FFE082"/></svg>
+      </div>
+      <div class="plaque-corner plaque-br">
+        <svg viewBox="0 0 30 30" fill="none"><path d="M27 3 V20 C27 24 24 27 20 27 H3 M22 22 C24 17 24 13 22 8 M22 22 C17 24 13 24 8 22" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="2.5" fill="#FFE082"/></svg>
+      </div>
+
+      <div class="plaque-inner-body">
+        <div class="plaque-visit-tag">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>VISIT US AT &ndash;</span>
+        </div>
+        
+        <div class="plaque-store-title">AARAA BOTIQUE</div>
+        
+        <div class="plaque-store-address">
+          5/102 MTP ROAD, T.K.P Complex, Viswanathapuram,<br>
+          Thudiyalur &ndash; 641 034, Coimbatore, Tamil Nadu 641034
+        </div>
+
+        <!-- Quick Action Links -->
+        <div class="plaque-actions-bar">
+          <a href="tel:+919025927548" class="btn-plaque-action" aria-label="Call boutique at 90259 27548">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 90259 27548</span>
+          </a>
+          <a href="https://wa.me/919025927548?text=Hello%20Aaraa%20Boutique%2C%20I%20am%20interested%20in%20your%20festive%20offers." target="_blank" rel="noopener noreferrer" class="btn-plaque-action btn-plaque-whatsapp" aria-label="WhatsApp boutique at 90259 27548">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://maps.google.com/?q=5%2F102+MTP+ROAD+T.K.P+Complex+Viswanathapuram+Thudiyalur+Coimbatore+Tamil+Nadu+641034" target="_blank" rel="noopener noreferrer" class="btn-plaque-action btn-plaque-directions" aria-label="Get Google Maps directions">
+            <i class="fa-solid fa-diamond-turn-right"></i>
+            <span>Directions</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 4. Winning Result Card Modal Dialog (Horizontal Luxury Rectangle) -->
+  <div class="modal-backdrop" id="winnerModal" role="dialog" aria-modal="true" aria-labelledby="congratsHeading">
+    <div class="result-card-modal">
+      
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-brand-badge">✦ AARAA BOTIQUE &bull; THUDIYALUR ✦</div>
+      <h3 class="congrats-title" id="congratsHeading">🎉 CONGRATULATIONS!</h3>
+      <p class="congrats-sub">Special Festive Diwali Reward Unlocked</p>
+
+      <!-- Horizontal Gold Voucher Certificate -->
+      <div class="gold-winner-voucher">
+        <div class="voucher-prize-info">
+          <div class="voucher-prize-value">EXTRA 5% OFF</div>
+          <div class="voucher-prize-tag">
+            <span>INSTANT BOTIQUE SAVINGS</span>
+            <span class="voucher-stars">★★★★★</span>
+          </div>
+        </div>
+
+        <div class="voucher-coupon-wrap">
+          <span class="voucher-coupon-lbl">Coupon Code</span>
+          <div class="voucher-coupon-row">
+            <span class="coupon-code-val" id="couponCode">AARAA5OFF</span>
+            <button class="btn-copy-code" id="copyCodeBtn" aria-label="Copy Coupon Code">
+              <i class="fa-regular fa-copy"></i>
+              <span id="copyBtnText">Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side-by-Side Action Buttons -->
+      <div class="modal-actions-row">
+        <a href="https://wa.me/919025927548?text=Hello%20Aaraa%20Boutique%2C%20I%20won%20EXTRA%205%25%20OFF%20on%20the%20lucky%20spin%20wheel!%20My%20Coupon%20Code%20is%20AARAA5OFF.%20I%20would%20like%20to%20claim%20my%20discount." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-claim">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>WhatsApp Claim</span>
+        </a>
+
+        <a href="https://maps.google.com/?q=5%2F102+MTP+ROAD+T.K.P+Complex+Viswanathapuram+Thudiyalur+Coimbatore+Tamil+Nadu+641034" target="_blank" rel="noopener noreferrer" class="btn-visit-boutique">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Visit Boutique</span>
+        </a>
+      </div>
+
+      <p class="modal-disclaimer">
+        *Present code at billing &bull; 5/102 MTP ROAD, T.K.P Complex, Viswanathapuram, Thudiyalur, Coimbatore.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- 5. JavaScript Logic -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Guaranteed Winning Result: EXTRA 5% OFF
+      const FIXED_WINNING_PRIZE = {
+        title: "EXTRA 5% OFF",
+        badge: "EXTRA 5% OFF",
+        congratulations: "🎉 CONGRATULATIONS!",
+        message: "You’ve won EXTRA 5% OFF at AARAA BOTIQUE!",
+        couponCode: "AARAA5OFF"
+      };
+
+      // 20 Twinkling Bulbs around the circular rim
+      const rimContainer = document.getElementById('rimBulbsContainer');
+      const totalBulbs = 20;
+      for (let i = 0; i < totalBulbs; i++) {
+        const angle = (i * (360 / totalBulbs)) * (Math.PI / 180);
+        const xPercent = 50 + 47.8 * Math.cos(angle);
+        const yPercent = 50 + 47.8 * Math.sin(angle);
+        const bulb = document.createElement('div');
+        bulb.className = 'rim-bulb';
+        bulb.style.left = `${xPercent}%`;
+        bulb.style.top = `${yPercent}%`;
+        bulb.style.animationDelay = `${(i * 0.12).toFixed(2)}s`;
+        rimContainer.appendChild(bulb);
+      }
+
+      // Web Audio API Synthesizer
+      let audioCtx = null;
+      let soundEnabled = true;
+
+      function getAudioContext() {
+        if (!audioCtx) {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) audioCtx = new AudioContextClass();
+        }
+        if (audioCtx && audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        return audioCtx;
+      }
+
+      document.addEventListener('click', () => { getAudioContext(); }, { once: true });
+
+      function playCrackerBlastSound(isBoom = false) {
+        if (!soundEnabled) return;
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        try {
+          const bufferSize = ctx.sampleRate * (isBoom ? 0.32 : 0.12);
+          const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (bufferSize * 0.22));
+          }
+          const noise = ctx.createBufferSource();
+          noise.buffer = buffer;
+          const filter = ctx.createBiquadFilter();
+          filter.type = isBoom ? 'lowpass' : 'bandpass';
+          filter.frequency.setValueAtTime(isBoom ? 500 : 1300, ctx.currentTime);
+          
+          const gain = ctx.createGain();
+          gain.gain.setValueAtTime(isBoom ? 0.22 : 0.14, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + (isBoom ? 0.32 : 0.12));
+          
+          noise.connect(filter);
+          filter.connect(gain);
+          gain.connect(ctx.destination);
+          noise.start();
+        } catch (e) {}
+      }
+
+      function playTickSound() {
+        if (!soundEnabled) return;
+        const ctxAudio = getAudioContext();
+        if (!ctxAudio) return;
+        try {
+          const osc = ctxAudio.createOscillator();
+          const gain = ctxAudio.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(700 + Math.random() * 150, ctxAudio.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(140, ctxAudio.currentTime + 0.035);
+          gain.gain.setValueAtTime(0.2, ctxAudio.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctxAudio.currentTime + 0.035);
+          osc.connect(gain);
+          gain.connect(ctxAudio.destination);
+          osc.start();
+          osc.stop(ctxAudio.currentTime + 0.035);
+        } catch (e) {}
+      }
+
+      function playWinFanfare() {
+        if (!soundEnabled) return;
+        const ctxAudio = getAudioContext();
+        if (!ctxAudio) return;
+        try {
+          const notes = [523.25, 659.25, 783.99, 1046.50];
+          notes.forEach((freq, idx) => {
+            const osc = ctxAudio.createOscillator();
+            const gain = ctxAudio.createGain();
+            osc.type = 'sine';
+            const startTime = ctxAudio.currentTime + idx * 0.11;
+            osc.frequency.setValueAtTime(freq, startTime);
+            gain.gain.setValueAtTime(0, startTime);
+            gain.gain.linearRampToValueAtTime(0.22, startTime + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.65);
+            osc.connect(gain);
+            gain.connect(ctxAudio.destination);
+            osc.start(startTime);
+            osc.stop(startTime + 0.65);
+          });
+        } catch (e) {}
+      }
+
+      // Sound Toggle
+      const soundToggleBtn = document.getElementById('soundToggleBtn');
+      const soundIcon = document.getElementById('soundIcon');
+      const soundLabel = document.getElementById('soundLabel');
+
+      if (soundToggleBtn) {
+        soundToggleBtn.addEventListener('click', () => {
+          soundEnabled = !soundEnabled;
+          if (soundEnabled) {
+            if (soundIcon) soundIcon.className = "fa-solid fa-volume-high";
+            if (soundLabel) soundLabel.textContent = "Sound ON";
+            getAudioContext();
+            showToast("Sound effects enabled 🔔");
+          } else {
+            if (soundIcon) soundIcon.className = "fa-solid fa-volume-xmark";
+            if (soundLabel) soundLabel.textContent = "Sound OFF";
+            showToast("Sound effects muted 🔇");
+          }
+        });
+      }
+
+      // Continuous Background Fireworks & Crackers Blasting in Night Sky
+      const bgCanvas = document.getElementById('bgCrackersCanvas');
+      let bgRockets = [];
+      let bgParticles = [];
+      let bgFlashes = [];
+
+      if (bgCanvas) {
+        const bgCtx = bgCanvas.getContext('2d');
+        let bgWidth = (bgCanvas.width = window.innerWidth);
+        let bgHeight = (bgCanvas.height = window.innerHeight);
+
+        window.addEventListener('resize', () => {
+          bgWidth = bgCanvas.width = window.innerWidth;
+          bgHeight = bgCanvas.height = window.innerHeight;
+        });
+
+        const crackerColors = [
+          '#FFE898', '#FFB300', '#FF3D71', '#FF0055',
+          '#00E5FF', '#2979FF', '#76FF03', '#E040FB', '#FFF'
+        ];
+
+        class Rocket {
+          constructor(targetX, targetY) {
+            this.x = targetX !== undefined ? targetX : Math.random() * bgWidth;
+            this.y = bgHeight + 10;
+            this.targetY = targetY !== undefined ? targetY : bgHeight * 0.12 + Math.random() * (bgHeight * 0.45);
+            this.speed = 10 + Math.random() * 5;
+            this.color = crackerColors[Math.floor(Math.random() * crackerColors.length)];
+            this.exploded = false;
+            this.trail = [];
+          }
+
+          update() {
+            this.trail.push({ x: this.x, y: this.y, alpha: 0.7 });
+            if (this.trail.length > 5) this.trail.shift();
+            this.trail.forEach(t => (t.alpha *= 0.7));
+
+            this.y -= this.speed;
+            if (this.y <= this.targetY) {
+              this.explode();
+            }
+          }
+
+          explode() {
+            this.exploded = true;
+            playCrackerBlastSound(false);
+
+            bgFlashes.push({
+              x: this.x,
+              y: this.y,
+              radius: 60 + Math.random() * 80,
+              alpha: 0.35,
+              color: this.color
+            });
+
+            const particleCount = window.innerWidth < 600 ? 32 : 55;
+            for (let i = 0; i < particleCount; i++) {
+              bgParticles.push(new Particle(this.x, this.y, this.color));
+            }
+          }
+
+          draw() {
+            this.trail.forEach(t => {
+              bgCtx.save();
+              bgCtx.globalAlpha = t.alpha;
+              bgCtx.fillStyle = '#FFE082';
+              bgCtx.beginPath();
+              bgCtx.arc(t.x, t.y, 1.8, 0, Math.PI * 2);
+              bgCtx.fill();
+              bgCtx.restore();
+            });
+
+            bgCtx.save();
+            bgCtx.fillStyle = '#FFFFFF';
+            bgCtx.shadowColor = this.color;
+            bgCtx.shadowBlur = 10;
+            bgCtx.beginPath();
+            bgCtx.arc(this.x, this.y, 2.5, 0, Math.PI * 2);
+            bgCtx.fill();
+            bgCtx.restore();
+          }
+        }
+
+        class Particle {
+          constructor(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.color = color || crackerColors[Math.floor(Math.random() * crackerColors.length)];
+            const angle = Math.random() * Math.PI * 2;
+            const velocity = 2 + Math.random() * 6;
+            this.vx = Math.cos(angle) * velocity;
+            this.vy = Math.sin(angle) * velocity;
+            this.gravity = 0.08;
+            this.friction = 0.96;
+            this.alpha = 1;
+            this.decay = 0.014 + Math.random() * 0.016;
+            this.size = 2 + Math.random() * 2;
+          }
+
+          update() {
+            this.vx *= this.friction;
+            this.vy *= this.friction;
+            this.vy += this.gravity;
+            this.x += this.vx;
+            this.y += this.vy;
+            this.alpha -= this.decay;
+          }
+
+          draw() {
+            if (this.alpha <= 0) return;
+            bgCtx.save();
+            bgCtx.globalAlpha = this.alpha;
+            bgCtx.fillStyle = this.color;
+            bgCtx.shadowColor = this.color;
+            bgCtx.shadowBlur = 6;
+            bgCtx.beginPath();
+            bgCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            bgCtx.fill();
+            bgCtx.restore();
+          }
+        }
+
+        let lastLaunchTime = 0;
+        const launchInterval = 1400;
+
+        function animateBgFireworks(currentTime) {
+          bgCtx.clearRect(0, 0, bgWidth, bgHeight);
+
+          if (currentTime - lastLaunchTime > launchInterval) {
+            bgRockets.push(new Rocket());
+            if (Math.random() > 0.5) {
+              setTimeout(() => {
+                bgRockets.push(new Rocket());
+              }, 250);
+            }
+            lastLaunchTime = currentTime;
+          }
+
+          for (let i = bgFlashes.length - 1; i >= 0; i--) {
+            const f = bgFlashes[i];
+            f.alpha -= 0.05;
+            if (f.alpha <= 0) {
+              bgFlashes.splice(i, 1);
+            } else {
+              bgCtx.save();
+              const grad = bgCtx.createRadialGradient(f.x, f.y, 0, f.x, f.y, f.radius);
+              grad.addColorStop(0, f.color);
+              grad.addColorStop(1, 'transparent');
+              bgCtx.globalAlpha = f.alpha;
+              bgCtx.fillStyle = grad;
+              bgCtx.beginPath();
+              bgCtx.arc(f.x, f.y, f.radius, 0, Math.PI * 2);
+              bgCtx.fill();
+              bgCtx.restore();
+            }
+          }
+
+          for (let i = bgRockets.length - 1; i >= 0; i--) {
+            const r = bgRockets[i];
+            r.update();
+            r.draw();
+            if (r.exploded) {
+              bgRockets.splice(i, 1);
+            }
+          }
+
+          for (let i = bgParticles.length - 1; i >= 0; i--) {
+            const p = bgParticles[i];
+            p.update();
+            p.draw();
+            if (p.alpha <= 0) {
+              bgParticles.splice(i, 1);
+            }
+          }
+
+          requestAnimationFrame(animateBgFireworks);
+        }
+
+        requestAnimationFrame(animateBgFireworks);
+
+        window.launchBgCracker = (isBig = false) => {
+          const r = new Rocket(
+            bgWidth * 0.2 + Math.random() * (bgWidth * 0.6),
+            bgHeight * 0.15 + Math.random() * (bgHeight * 0.35)
+          );
+          if (isBig) r.speed = 14;
+          bgRockets.push(r);
+        };
+      }
+
+      // Confetti Celebration
+      const confettiCanvas = document.getElementById('confettiCanvas');
+      if (confettiCanvas) {
+        const confettiCtx = confettiCanvas.getContext('2d');
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+          confettiCanvas.width = window.innerWidth;
+          confettiCanvas.height = window.innerHeight;
+        });
+
+        let confettiPieces = [];
+        let confettiAnimationId = null;
+
+        function triggerConfetti() {
+          confettiPieces = [];
+          const colors = ['#FFE898', '#D4AF37', '#FF4D94', '#FFF', '#9B1B56', '#FDE8EF'];
+          const count = window.innerWidth <= 600 ? 75 : 160;
+          for (let i = 0; i < count; i++) {
+            confettiPieces.push({
+              x: window.innerWidth / 2,
+              y: window.innerHeight / 2 - 50,
+              r: Math.random() * 8 + 4,
+              d: Math.random() * 50 + 10,
+              color: colors[Math.floor(Math.random() * colors.length)],
+              tilt: Math.floor(Math.random() * 10) - 10,
+              tiltAngleInc: (Math.random() * 0.07) + 0.05,
+              tiltAngle: 0,
+              vx: (Math.random() - 0.5) * 22,
+              vy: (Math.random() - 0.7) * 24,
+              gravity: 0.38,
+              alpha: 1
+            });
+          }
+          if (confettiAnimationId) cancelAnimationFrame(confettiAnimationId);
+          updateConfetti();
+        }
+
+        function updateConfetti() {
+          confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+          let activePieces = 0;
+
+          confettiPieces.forEach(p => {
+            p.x += p.vx;
+            p.y += p.vy;
+            p.vy += p.gravity;
+            p.vx *= 0.98;
+            p.tiltAngle += p.tiltAngleInc;
+            p.tilt = Math.sin(p.tiltAngle) * 15;
+            p.alpha -= 0.0035;
+
+            if (p.alpha > 0 && p.y < confettiCanvas.height + 50) {
+              activePieces++;
+              confettiCtx.save();
+              confettiCtx.globalAlpha = Math.max(0, p.alpha);
+              confettiCtx.fillStyle = p.color;
+              confettiCtx.beginPath();
+              confettiCtx.lineWidth = p.r / 2;
+              confettiCtx.moveTo(p.x + p.tilt + p.r / 4, p.y);
+              confettiCtx.lineTo(p.x + p.tilt, p.y + p.tilt + p.r / 4);
+              confettiCtx.lineTo(p.x + p.tilt + p.r / 2, p.y + p.tilt + p.r / 2);
+              confettiCtx.lineTo(p.x + p.tilt + p.r, p.y + p.r / 2);
+              confettiCtx.closePath();
+              confettiCtx.fill();
+              confettiCtx.restore();
+            }
+          });
+
+          if (activePieces > 0) {
+            confettiAnimationId = requestAnimationFrame(updateConfetti);
+          } else {
+            confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+          }
+        }
+
+        window.triggerAppConfetti = triggerConfetti;
+      }
+
+      // Spin Physics
+      const spinBtn = document.getElementById('spinBtn');
+      const wheelDisc = document.getElementById('wheelDisc');
+      const pointerNeedle = document.getElementById('pointerNeedle');
+      const spinStatusNote = document.getElementById('spinStatusNote');
+      const winnerModal = document.getElementById('winnerModal');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const copyCodeBtn = document.getElementById('copyCodeBtn');
+
+      let currentRotation = 0;
+      let isSpinning = false;
+
+      function calculateWinningAngle() {
+        const fullSpins = (6 + Math.floor(Math.random() * 3)) * 360;
+        const naturalJitter = (Math.random() - 0.5) * 12; // Lands directly inside EXTRA 5% OFF segment (180deg)
+        
+        const currentMod = currentRotation % 360;
+        let delta = (180 + naturalJitter) - currentMod;
+        if (delta <= 0) delta += 360;
+
+        return currentRotation + fullSpins + delta;
+      }
+
+      function startSpin() {
+        if (isSpinning || !wheelDisc) return;
+        isSpinning = true;
+
+        getAudioContext();
+
+        if (window.launchBgCracker) {
+          window.launchBgCracker(true);
+        }
+
+        if (spinBtn) {
+          spinBtn.disabled = true;
+          spinBtn.innerHTML = `<i class="fa-solid fa-rotate-right fa-spin spin-btn-icon"></i> <span>SPINNING...</span>`;
+        }
+        if (spinStatusNote) {
+          spinStatusNote.innerHTML = `🍀 <strong style="color: var(--gold-bright);">The wheel is spinning!</strong> Finding your lucky offer...`;
+        }
+
+        const targetRotation = calculateWinningAngle();
+        const spinDurationMs = 6000;
+
+        wheelDisc.style.transition = `transform ${spinDurationMs / 1000}s cubic-bezier(0.12, 0.99, 0.22, 1)`;
+        wheelDisc.style.transform = `rotate(${targetRotation}deg)`;
+
+        let tickDelay = 70;
+        const totalDuration = spinDurationMs;
+        const startTime = performance.now();
+
+        function scheduleNextTick() {
+          if (!isSpinning) return;
+          const elapsed = performance.now() - startTime;
+          const progress = elapsed / totalDuration;
+
+          if (progress < 0.96) {
+            playTickSound();
+            if (pointerNeedle) {
+              pointerNeedle.classList.add('ticking');
+              setTimeout(() => pointerNeedle.classList.remove('ticking'), 30);
+            }
+
+            tickDelay = 65 + Math.pow(progress, 2.5) * 320;
+            setTimeout(scheduleNextTick, tickDelay);
+          }
+        }
+
+        setTimeout(scheduleNextTick, 80);
+
+        setTimeout(() => {
+          isSpinning = false;
+          currentRotation = targetRotation;
+          if (spinBtn) {
+            spinBtn.disabled = false;
+            spinBtn.innerHTML = `<i class="fa-solid fa-rotate-right spin-btn-icon"></i> <span>SPIN AGAIN</span>`;
+          }
+          if (spinStatusNote) {
+            spinStatusNote.innerHTML = `🎉 <strong>Congratulations!</strong> You won <span style="color: var(--gold-bright);">${FIXED_WINNING_PRIZE.title}</span>!`;
+          }
+
+          if (window.triggerAppConfetti) window.triggerAppConfetti();
+          playWinFanfare();
+
+          if (window.launchBgCracker) {
+            window.launchBgCracker(true);
+            setTimeout(() => window.launchBgCracker(true), 400);
+          }
+
+          displayWinningResult(FIXED_WINNING_PRIZE);
+        }, spinDurationMs);
+      }
+
+      if (spinBtn) spinBtn.addEventListener('click', startSpin);
+      if (wheelDisc) {
+        wheelDisc.addEventListener('click', () => {
+          if (!isSpinning) startSpin();
+        });
+      }
+
+      // Modal Display
+      function displayWinningResult(prize) {
+        if (winnerModal) winnerModal.classList.add('active');
+      }
+
+      function closeModal() {
+        if (winnerModal) winnerModal.classList.remove('active');
+      }
+
+      if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+      if (winnerModal) {
+        winnerModal.addEventListener('click', (e) => {
+          if (e.target === winnerModal) closeModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && winnerModal && winnerModal.classList.contains('active')) {
+          closeModal();
+        }
+      });
+
+      if (copyCodeBtn) {
+        copyCodeBtn.addEventListener('click', () => {
+          const codeText = document.getElementById('couponCode').textContent;
+          navigator.clipboard.writeText(codeText).then(() => {
+            const copyBtnText = document.getElementById('copyBtnText');
+            copyBtnText.textContent = "Copied! ✓";
+            showToast(`Coupon "${codeText}" copied! Show at billing.`);
+            setTimeout(() => {
+              copyBtnText.textContent = "Copy";
+            }, 3000);
+          }).catch(() => {
+            showToast(`Coupon Code: ${codeText}`);
+          });
+        });
+      }
+
+      const toastPopup = document.getElementById('toastMessage');
+      const toastText = document.getElementById('toastText');
+      let toastTimeout = null;
+
+      function showToast(msg) {
+        toastText.textContent = msg;
+        toastPopup.classList.add('show');
+        if (toastTimeout) clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toastPopup.classList.remove('show');
+        }, 3200);
+      }
+
+    });
+  </script>
+</body>
+</html>

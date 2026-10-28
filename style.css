@@ -1,0 +1,1303 @@
+﻿/* Synchronized luxury stylesheet for Aaraa Boutique Spin Wheel */
+
+/* ==========================================================================
+       1. LUXURY REGAL PURPLE & GOLD DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --bg-dark: #0A0109;
+      --bg-card: rgba(30, 4, 25, 0.94);
+
+      --gold-primary: #D4AF37;
+      --gold-light: #FDF0CD;
+      --gold-bright: #FEE180;
+      --gold-dark: #8F6E1D;
+      --gold-metallic: linear-gradient(135deg, #FFF0B8 0%, #D4AF37 40%, #8F6E1D 75%, #FEE593 100%);
+      --gold-btn-gradient: linear-gradient(135deg, #FFE898 0%, #E8BC52 50%, #B88924 100%);
+      --gold-border: 1px solid rgba(212, 175, 55, 0.45);
+
+      --ruby-btn-gradient: linear-gradient(180deg, #A80D58 0%, #720539 50%, #4D0225 100%);
+
+      --font-display: 'Cinzel', Georgia, serif;
+      --font-script: 'Caveat', cursive;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      width: 100%;
+      box-sizing: border-box;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: hidden;
+      background-color: #06010B;
+      background-image: 
+        radial-gradient(circle at 50% 30%, rgba(14, 2, 22, 0.38) 0%, rgba(5, 1, 9, 0.85) 100%),
+        url('assets/sky_fireworks_1.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #FFF5F8;
+      font-family: var(--font-body);
+      line-height: 1.35;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      padding-left: env(safe-area-inset-left, 0px);
+      padding-right: env(safe-area-inset-right, 0px);
+    }
+
+    /* Ambient Festive Sparkle Grid */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(rgba(212, 175, 55, 0.2) 1px, transparent 1px);
+      background-size: 38px 38px;
+      opacity: 0.3;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Fullscreen Background Fireworks Canvas */
+    #bgCrackersCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(0.5rem, 2.5vw, 1.25rem);
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ==========================================================================
+       2. TOP COMPACT BRAND HEADER BAR
+       ========================================================================== */
+    header.compact-header {
+      padding: clamp(0.25rem, 0.8vh, 0.45rem) 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      background: rgba(10, 1, 14, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: relative;
+      z-index: 50;
+      flex-shrink: 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(0.35rem, 1.5vw, 1rem);
+    }
+
+    .brand-top-badge {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.35rem, 1.2vw, 0.55rem);
+      min-width: 0;
+    }
+
+    .brand-lotus-mini {
+      width: clamp(20px, 3.5vw, 26px);
+      height: clamp(20px, 3.5vw, 26px);
+      filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.6));
+      flex-shrink: 0;
+    }
+
+    .brand-lotus-mini svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .brand-mini-text {
+      font-family: var(--font-display);
+      font-size: clamp(0.68rem, 1.8vw, 0.95rem);
+      font-weight: 800;
+      letter-spacing: clamp(0.5px, 0.3vw, 2px);
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .header-quick-contact {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .btn-quick-call {
+      background: transparent;
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .btn-quick-call:hover {
+      background: rgba(212, 175, 55, 0.2);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-quick-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #FFFFFF;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+      box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-quick-whatsapp:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.45);
+    }
+
+    /* ==========================================================================
+       3. CENTER SCREEN STAGE (Matches User's Reference Poster Artwork Exactly!)
+       ========================================================================== */
+    main.center-app-stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem 1rem 0.45rem;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      min-height: 0;
+    }
+
+    /* Fullscreen Seamless Festive Floor Panorama (Lanterns, Diyas, Reflective Stage, Foliage Bokeh) */
+    .festive-floor-panorama {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: clamp(150px, 32vh, 320px);
+      background-image: url('assets/festive_floor_panorama.png');
+      background-size: cover;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* Brand Header Top (Centered above wheel) */
+    .hero-brand-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: clamp(0.1rem, 0.6vh, 0.25rem);
+      flex-shrink: 0;
+    }
+
+    .hero-crest-icon {
+      width: clamp(28px, 4.5vw, 36px);
+      height: clamp(28px, 4.5vw, 36px);
+      margin-bottom: 2px;
+      filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.85));
+      animation: lotusPulse 2.5s infinite ease-in-out;
+    }
+
+    @keyframes lotusPulse {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.7)); }
+      50% { transform: scale(1.06); filter: drop-shadow(0 0 18px rgba(254, 225, 128, 0.95)); }
+    }
+
+    .hero-crest-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-brand-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 3.4vw, 2.15rem);
+      font-weight: 900;
+      letter-spacing: clamp(3px, 0.8vw, 5px);
+      line-height: 1;
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.9));
+    }
+
+    .hero-brand-sub {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      margin-top: 1px;
+    }
+
+    .hero-brand-sub .sub-text {
+      font-family: var(--font-display);
+      font-size: clamp(0.68rem, 1.4vw, 0.85rem);
+      font-weight: 700;
+      letter-spacing: clamp(3px, 0.6vw, 5px);
+      color: var(--gold-bright);
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+    }
+
+    .hero-brand-sub .sub-line {
+      display: inline-block;
+      width: clamp(20px, 4vw, 36px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+    }
+
+    .hero-tagline-script {
+      font-family: var(--font-script);
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      margin-top: 1px;
+      text-shadow: 0 0 10px rgba(254, 225, 128, 0.75);
+    }
+
+    /* THE WHEEL CONTAINER (Proportionally Scaled to Fit Inside Viewport) */
+    .wheel-main-assembly {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      flex-shrink: 1;
+      min-height: 0;
+    }
+
+    .wheel-circular-stage {
+      position: relative;
+      width: clamp(260px, min(calc(100vw - 32px), 43vh, 43dvh, 78vw), 420px);
+      height: auto;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      flex-shrink: 0;
+      max-width: 100%;
+    }
+
+    /* Top Fixed Gold Pointer Arrow (Matches Reference Poster with Leaf Crest!) */
+    .wheel-pointer-needle {
+      position: absolute;
+      top: clamp(-24px, -3vw, -18px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: clamp(34px, 5.2vw, 46px);
+      height: clamp(42px, 6.5vw, 56px);
+      z-index: 30;
+      pointer-events: none;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.9));
+      transition: transform 0.08s ease;
+    }
+
+    .wheel-pointer-needle.ticking {
+      transform: translateX(-50%) rotate(-9deg) scale(1.1);
+    }
+
+    .wheel-pointer-needle svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Gold Outer Bezel Rim with 20 Twinkling LED Bulbs */
+    .wheel-outer-bezel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      padding: clamp(8px, 2vw, 13px);
+      background: radial-gradient(circle, #FFECA9 0%, #D4AF37 40%, #7A5308 75%, #ECC55B 100%);
+      box-shadow: 
+        0 10px 32px rgba(0, 0, 0, 0.9),
+        0 0 28px rgba(212, 175, 55, 0.5),
+        inset 0 0 10px rgba(0, 0, 0, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .rim-bulbs-container {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 25;
+    }
+
+    .rim-bulb {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      box-shadow: 0 0 6px 2px #FFE082, 0 0 12px 3px #FFB300;
+      transform: translate(-50%, -50%);
+      animation: bulbTwinkle 1.8s infinite ease-in-out alternate;
+    }
+
+    @keyframes bulbTwinkle {
+      0% { opacity: 0.45; transform: translate(-50%, -50%) scale(0.85); box-shadow: 0 0 4px 1px #FFE082; }
+      100% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); box-shadow: 0 0 8px 3px #FFE082, 0 0 16px 4px #FFB300; }
+    }
+
+    /* Clean Circular Rotating Disc (High-Res 1000x1000 Master Extracted from Poster) */
+    .wheel-rotating-disc {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.85);
+      cursor: pointer;
+      user-select: none;
+      transform: rotate(0deg);
+      transition: transform 6s cubic-bezier(0.12, 0.99, 0.22, 1);
+    }
+
+    .wheel-rotating-disc img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      pointer-events: none;
+    }
+
+    /* Golden Pedestal Stand */
+    .wheel-stand-base {
+      position: relative;
+      width: clamp(160px, 38vw, 250px);
+      height: clamp(20px, 4vw, 32px);
+      margin-top: -6px;
+      z-index: 5;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
+      flex-shrink: 0;
+      max-width: 85%;
+    }
+
+    .wheel-stand-base svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Spin Action Controls */
+    .spin-controls-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      margin-top: clamp(0.25rem, 1vh, 0.45rem);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 15;
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       4. PROMINENT "SPIN & WIN" RUBY-MAGENTA PILL BUTTON (Matches Poster Exactly!)
+       ========================================================================== */
+    .btn-spin-now {
+      position: relative;
+      background: var(--ruby-btn-gradient);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.02rem, 2.4vw, 1.25rem);
+      letter-spacing: clamp(1.5px, 0.3vw, 2.5px);
+      padding: clamp(0.6rem, 1.8vh, 0.8rem) clamp(2.2rem, 5.5vw, 3.2rem);
+      min-height: 48px;
+      border-radius: var(--radius-full);
+      border: 2px solid #FFE082;
+      box-shadow: 
+        0 0 28px rgba(233, 30, 99, 0.85),
+        0 0 12px rgba(255, 224, 130, 0.75),
+        0 10px 28px rgba(0, 0, 0, 0.9),
+        inset 0 2px 4px rgba(255, 255, 255, 0.85),
+        inset 0 -2px 6px rgba(0, 0, 0, 0.6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      text-transform: uppercase;
+      transition: var(--transition);
+      cursor: pointer;
+      overflow: hidden;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-select: none;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .btn-spin-now::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: 0.6s ease;
+    }
+
+    .btn-spin-now:hover:not(:disabled)::before {
+      left: 100%;
+    }
+
+    .btn-spin-now:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 
+        0 0 40px rgba(233, 30, 99, 1),
+        0 0 18px rgba(255, 224, 130, 0.95),
+        0 14px 34px rgba(0, 0, 0, 0.95),
+        inset 0 2px 6px rgba(255, 255, 255, 0.95);
+      border-color: #FFF5C0;
+    }
+
+    .btn-spin-now:active:not(:disabled) {
+      transform: translateY(0) scale(0.99);
+    }
+
+    .btn-spin-now:disabled {
+      opacity: 0.82;
+      cursor: not-allowed;
+    }
+
+    .btn-spin-now .spin-btn-icon {
+      font-size: 1.15em;
+      filter: drop-shadow(0 0 6px rgba(255, 224, 130, 0.85));
+    }
+
+    /* Tagline Directly Below Button (Script font with diamond sparkles) */
+    .festive-center-tagline {
+      font-family: var(--font-script);
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #FFF2C6;
+      text-shadow: 
+        0 0 8px rgba(255, 242, 198, 0.85),
+        0 0 18px rgba(212, 175, 55, 0.65),
+        0 2px 4px rgba(0, 0, 0, 0.95);
+      margin-top: clamp(0.2rem, 0.7vh, 0.4rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .festive-center-tagline .sparkle-star {
+      color: #FFE082;
+      font-size: 0.9em;
+      filter: drop-shadow(0 0 6px #FFD700);
+    }
+
+    .spin-status-msg {
+      font-size: 0.76rem;
+      color: var(--gold-light);
+      font-weight: 500;
+      min-height: 1.1rem;
+    }
+
+    .sound-toggle-chip {
+      background: rgba(30, 4, 25, 0.85);
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      color: var(--gold-light);
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 0.18rem 0.7rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 2px;
+    }
+
+    .sound-toggle-chip:hover {
+      background: var(--gold-primary);
+      color: #210314;
+    }
+
+    /* ==========================================================================
+       5. ORNATE ROYAL ADDRESS PLAQUE (Matches Poster Bottom Scroll Frame Card!)
+       ========================================================================== */
+    .royal-address-plaque {
+      position: relative;
+      width: 100%;
+      max-width: 580px;
+      margin: clamp(0.35rem, 1vh, 0.65rem) auto 0;
+      padding: clamp(0.65rem, 1.6vh, 0.95rem) clamp(0.85rem, 2.5vw, 1.6rem);
+      background: rgba(6, 11, 26, 0.93);
+      border: 1.5px solid #D4AF37;
+      border-radius: 18px;
+      box-shadow: 
+        0 10px 32px rgba(0, 0, 0, 0.92),
+        0 0 24px rgba(212, 175, 55, 0.38),
+        inset 0 0 12px rgba(212, 175, 55, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 20;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .plaque-corner {
+      position: absolute;
+      width: clamp(20px, 3.5vw, 28px);
+      height: clamp(20px, 3.5vw, 28px);
+      pointer-events: none;
+      filter: drop-shadow(0 0 4px rgba(254, 225, 128, 0.6));
+    }
+    .plaque-tl { top: -2px; left: -2px; }
+    .plaque-tr { top: -2px; right: -2px; }
+    .plaque-bl { bottom: -2px; left: -2px; }
+    .plaque-br { bottom: -2px; right: -2px; }
+    .plaque-corner svg { width: 100%; height: 100%; }
+
+    .plaque-visit-tag {
+      font-family: var(--font-display);
+      font-size: clamp(0.62rem, 1.3vw, 0.72rem);
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 2px;
+    }
+
+    .plaque-store-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      font-weight: 900;
+      letter-spacing: 3px;
+      line-height: 1.1;
+      background: var(--gold-metallic);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.9));
+      margin-bottom: 3px;
+    }
+
+    .plaque-store-address {
+      font-size: clamp(0.68rem, 1.4vw, 0.76rem);
+      line-height: 1.35;
+      color: #FFF2D6;
+      font-weight: 500;
+      margin-bottom: clamp(0.45rem, 1vh, 0.65rem);
+    }
+
+    .plaque-actions-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(0.35rem, 1.2vw, 0.65rem);
+      flex-wrap: wrap;
+    }
+
+    .btn-plaque-action {
+      background: rgba(212, 175, 55, 0.15);
+      border: 1px solid var(--gold-primary);
+      color: #FFFFFF;
+      padding: clamp(0.28rem, 0.8vh, 0.36rem) clamp(0.55rem, 1.5vw, 0.8rem);
+      border-radius: var(--radius-full);
+      font-size: clamp(0.68rem, 1.3vw, 0.76rem);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: var(--transition);
+    }
+
+    @media (max-width: 600px) {
+      .plaque-actions-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem;
+        width: 100%;
+      }
+      .btn-plaque-action {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.25rem;
+        justify-content: center;
+        white-space: nowrap;
+      }
+      .btn-plaque-action.btn-plaque-directions {
+        grid-column: span 2;
+      }
+      .festive-center-tagline {
+        font-size: clamp(0.92rem, 3.8vw, 1.15rem);
+        padding: 0 0.4rem;
+        text-align: center;
+        margin-top: 0.2rem;
+        margin-bottom: 0.1rem;
+      }
+      .royal-address-plaque {
+        max-width: calc(100vw - 24px);
+        margin: 0.25rem auto 0;
+        padding: 0.5rem 0.65rem;
+      }
+      .compact-header .header-inner {
+        padding: 0 0.35rem;
+        gap: 0.3rem;
+      }
+      .brand-mini-text {
+        font-size: 0.7rem;
+        letter-spacing: 0.3px;
+      }
+      .btn-quick-call {
+        padding: 0.25rem 0.45rem;
+        font-size: 0.7rem;
+      }
+      .btn-quick-whatsapp {
+        padding: 0.25rem 0.45rem;
+        font-size: 0.7rem;
+      }
+      .btn-quick-whatsapp span {
+        display: none;
+      }
+    }
+
+    .btn-plaque-action:hover {
+      background: rgba(212, 175, 55, 0.3);
+      color: #FFFFFF;
+      transform: translateY(-1px);
+    }
+
+    .btn-plaque-action.btn-plaque-whatsapp {
+      border-color: rgba(37, 211, 102, 0.65);
+      background: rgba(37, 211, 102, 0.18);
+      color: #99FFC4;
+    }
+    .btn-plaque-action.btn-plaque-whatsapp:hover {
+      background: rgba(37, 211, 102, 0.35);
+      color: #FFFFFF;
+    }
+
+    .btn-plaque-action.btn-plaque-directions {
+      background: var(--gold-btn-gradient);
+      color: #210212;
+      border-color: #FFF2C0;
+      font-weight: 800;
+    }
+    .btn-plaque-action.btn-plaque-directions:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.6);
+    }
+
+    /* ==========================================================================
+       6. WINNING RESULT CARD MODAL DIALOG
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 0, 6, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      padding: clamp(0.75rem, 3vw, 1.5rem);
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .result-card-modal {
+      position: relative;
+      background: radial-gradient(circle at 50% 0%, #300320 0%, #15010E 75%, #0A0007 100%);
+      border: 2px solid var(--gold-bright);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.2rem, 3vh, 1.6rem) clamp(1rem, 3vw, 1.8rem);
+      width: 100%;
+      max-width: 540px;
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.95),
+        0 0 45px rgba(212, 175, 55, 0.65),
+        inset 0 0 20px rgba(212, 175, 55, 0.25);
+      text-align: center;
+      transform: scale(0.9) translateY(20px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .modal-backdrop.active .result-card-modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 0.65rem;
+      right: 0.75rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      color: var(--gold-light);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .modal-close-btn:hover {
+      background: #7A0C3C;
+      color: #FFFFFF;
+      transform: rotate(90deg);
+    }
+
+    .modal-brand-badge {
+      font-family: var(--font-display);
+      font-size: 0.62rem;
+      letter-spacing: 3px;
+      color: var(--gold-bright);
+      text-transform: uppercase;
+      margin-bottom: 0.15rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .congrats-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.6vw, 1.6rem);
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 0.1rem;
+      letter-spacing: 1.5px;
+      line-height: 1.1;
+    }
+
+    .congrats-sub {
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .gold-winner-voucher {
+      position: relative;
+      background: linear-gradient(135deg, #FFF7D8 0%, #ECD06B 30%, #C49226 70%, #FEE8A0 100%);
+      color: #2D0515;
+      padding: 0.85rem 1.15rem;
+      border-radius: var(--radius-md);
+      border: 2px solid #FFF6D5;
+      box-shadow: 
+        0 8px 22px rgba(0, 0, 0, 0.75),
+        0 0 25px rgba(212, 175, 55, 0.55),
+        inset 0 1px 3px rgba(255, 255, 255, 0.9);
+      margin: 0 auto 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+    }
+
+    .voucher-prize-info {
+      text-align: left;
+      flex: 1;
+    }
+
+    .voucher-prize-value {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3.2vw, 1.85rem);
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      line-height: 1;
+      color: #290412;
+      text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+    }
+
+    .voucher-prize-tag {
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #630C2C;
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .voucher-stars {
+      color: #8A5D07;
+      font-size: 0.55rem;
+      letter-spacing: 2px;
+    }
+
+    .voucher-coupon-wrap {
+      background: #1B0212;
+      border: 1px dashed var(--gold-bright);
+      border-radius: var(--radius-sm);
+      padding: 0.45rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      flex-shrink: 0;
+      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+    .voucher-coupon-lbl {
+      font-size: 0.55rem;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .voucher-coupon-row {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .coupon-code-val {
+      font-family: 'Courier New', monospace;
+      font-size: 1.08rem;
+      font-weight: 900;
+      color: var(--gold-bright);
+      letter-spacing: 1.5px;
+      line-height: 1;
+    }
+
+    .btn-copy-code {
+      background: rgba(212, 175, 55, 0.25);
+      border: 1px solid var(--gold-primary);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.25rem 0.55rem;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+    }
+
+    .btn-copy-code:hover {
+      background: var(--gold-primary);
+      color: #1F030E;
+    }
+
+    .modal-actions-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .btn-whatsapp-claim {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 0.62rem 0.85rem;
+      border-radius: var(--radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+      white-space: nowrap;
+    }
+
+    .btn-whatsapp-claim:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
+    }
+
+    .btn-visit-boutique {
+      background: var(--gold-btn-gradient);
+      color: #2A0414;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      padding: 0.62rem 0.85rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 6px 18px rgba(212, 175, 55, 0.5);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-visit-boutique:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.7);
+    }
+
+    .modal-disclaimer {
+      font-size: 0.65rem;
+      color: var(--gold-light);
+      opacity: 0.85;
+      margin-top: 0.45rem;
+    }
+
+    /* Confetti Canvas */
+    #confettiCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1001;
+    }
+
+    /* Toast Notification */
+    .toast-popup {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: rgba(36, 4, 28, 0.95);
+      border: 1px solid var(--gold-bright);
+      color: #FFF5F8;
+      padding: 0.65rem 1.15rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      z-index: 1100;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.25s ease;
+      pointer-events: none;
+    }
+
+    .toast-popup.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       7. RESPONSIVE DESIGN SPECIFICATIONS
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .header-quick-contact .btn-quick-call span {
+        display: none;
+      }
+      .header-quick-contact .btn-quick-call {
+        padding: 0.32rem 0.55rem;
+        min-width: 36px;
+        min-height: 36px;
+        justify-content: center;
+      }
+      .btn-spin-now {
+        min-height: 48px;
+        padding: 0.65rem 2.2rem;
+        font-size: 1.05rem;
+      }
+      .toast-popup {
+        bottom: 4.5rem;
+        right: 1rem;
+        left: 1rem;
+        text-align: center;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 0.45rem;
+      }
+      header.compact-header {
+        padding: 0.28rem 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      .brand-top-badge {
+        gap: 0.35rem;
+        min-width: 0;
+      }
+      .brand-mini-text {
+        font-size: 0.72rem;
+        letter-spacing: 0.4px;
+      }
+      .header-quick-contact {
+        gap: 0.35rem;
+      }
+      .btn-quick-call {
+        padding: 0.28rem 0.45rem;
+        font-size: 0.72rem;
+        min-height: 32px;
+      }
+      .btn-quick-whatsapp span {
+        display: none;
+      }
+      .btn-quick-whatsapp {
+        padding: 0.28rem 0.5rem;
+        min-width: 32px;
+        min-height: 32px;
+        justify-content: center;
+      }
+      .hero-brand-top {
+        margin-bottom: 0.15rem;
+      }
+      .hero-crest-icon {
+        width: 30px;
+        height: 30px;
+      }
+      .hero-brand-title {
+        font-size: 1.65rem;
+        letter-spacing: 2.5px;
+      }
+      .hero-brand-sub .sub-text {
+        font-size: 0.72rem;
+        letter-spacing: 3.5px;
+      }
+      .hero-brand-sub .sub-line {
+        width: 20px;
+      }
+      .hero-tagline-script {
+        font-size: 1.05rem;
+      }
+      .wheel-circular-stage {
+        width: clamp(235px, min(82vw, 36vh, 36dvh), 310px);
+      }
+      .btn-spin-now {
+        min-height: 44px;
+        padding: 0.5rem 1.6rem;
+        font-size: 0.95rem;
+        letter-spacing: 1.2px;
+      }
+      .festive-center-tagline {
+        font-size: clamp(0.92rem, 3.8vw, 1.1rem);
+        margin-top: 0.2rem;
+        margin-bottom: 0.1rem;
+        padding: 0 0.35rem;
+        gap: 0.35rem;
+        white-space: nowrap;
+      }
+      .royal-address-plaque {
+        max-width: 95vw;
+        padding: 0.5rem 0.6rem;
+        border-radius: 14px;
+        margin-top: 0.2rem;
+      }
+      .plaque-store-title {
+        font-size: 1.08rem;
+        letter-spacing: 2px;
+      }
+      .plaque-store-address {
+        font-size: 0.64rem;
+        margin-bottom: 0.35rem;
+        line-height: 1.25;
+      }
+      .plaque-actions-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem;
+        width: 100%;
+      }
+      .btn-plaque-action {
+        font-size: 0.68rem;
+        padding: 0.35rem 0.4rem;
+        justify-content: center;
+        white-space: nowrap;
+      }
+      .btn-plaque-action.btn-plaque-directions {
+        grid-column: span 2;
+      }
+      .result-card-modal {
+        padding: 1rem 0.85rem 0.85rem;
+      }
+      .congrats-title {
+        font-size: 1.25rem;
+      }
+      .voucher-prize-value {
+        font-size: 1.35rem;
+      }
+      .modal-actions-row {
+        gap: 0.5rem;
+      }
+      .btn-whatsapp-claim, .btn-visit-boutique {
+        font-size: 0.75rem;
+        padding: 0.55rem 0.65rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .container {
+        padding: 0 0.45rem;
+      }
+      .brand-mini-text {
+        font-size: 0.68rem;
+        letter-spacing: 0.3px;
+      }
+      .hero-brand-title {
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+      }
+      .hero-tagline-script {
+        font-size: 0.95rem;
+      }
+      .wheel-circular-stage {
+        width: clamp(220px, 82vw, 265px);
+      }
+      .btn-spin-now {
+        min-height: 44px;
+        padding: 0.55rem 1.6rem;
+        font-size: 0.92rem;
+        letter-spacing: 1px;
+      }
+      .festive-center-tagline {
+        font-size: 0.98rem;
+      }
+      .plaque-actions-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-plaque-action {
+        justify-content: center;
+      }
+      .gold-winner-voucher {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.6rem;
+      }
+      .modal-actions-row {
+        grid-template-columns: 1fr;
+        gap: 0.45rem;
+      }
+      .btn-whatsapp-claim, .btn-visit-boutique {
+        font-size: 0.74rem;
+        padding: 0.55rem 0.7rem;
+      }
+    }
+
+    @media (max-height: 620px) {
+      body {
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+      }
+      .hero-brand-top {
+        margin-bottom: 0.1rem;
+      }
+      .hero-crest-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .hero-brand-title {
+        font-size: 1.35rem;
+      }
+      .hero-tagline-script {
+        font-size: 0.95rem;
+      }
+      .wheel-circular-stage {
+        width: clamp(190px, min(38vh, 48vw), 270px);
+      }
+      .btn-spin-now {
+        min-height: 42px;
+        padding: 0.45rem 1.6rem;
+        font-size: 0.92rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .hero-crest-icon {
+        animation: none !important;
+      }
+      .rim-bulb {
+        animation: none !important;
+        opacity: 0.9 !important;
+      }
+      .btn-spin-now::before {
+        display: none !important;
+      }
+      .wheel-rotating-disc {
+        transition-duration: 1.5s !important;
+      }
+    }
